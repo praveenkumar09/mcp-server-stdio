@@ -41,9 +41,10 @@ public class HelpDeskTools {
             //returnDirect = true
     )
     public List<HelpDeskTicket> getAllTickets(
-            ToolContext toolContext
+            @ToolParam(description =
+                    "Username to fetch the status of the help desk tickets")
+                     String username
     ) {
-        String username = (String) toolContext.getContext().get("username");
         log.info("Getting all tickets for user {}",username);
         //throw new RuntimeException("Not yet implemented");
         return helpDeskTicketService.getAllTicketsByUsername(username);
