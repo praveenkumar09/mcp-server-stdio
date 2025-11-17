@@ -17,8 +17,7 @@ public class HelpDeskTicketService {
 
 
     public HelpDeskTicket createTicket(
-            TicketRequest ticketRequest,
-            String username
+            TicketRequest ticketRequest
     ){
         HelpDeskTicket helpDeskTicket= HelpDeskTicket
                 .builder()
